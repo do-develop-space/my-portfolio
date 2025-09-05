@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# My Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 소개
 
-## Available Scripts
+이 프로젝트는 **권태준** 개발자의 개인 포트폴리오 웹사이트입니다. React를 사용하여 개발되었으며, 저의 기술 역량, 주요 프로젝트 경험, 그리고 개발자로서의 철학을 효과적으로 보여주기 위해 제작되었습니다.
 
-In the project directory, you can run:
+## 주요 기능
 
-### `npm start`
+이 포트폴리오는 다음과 같은 섹션으로 구성되어 있습니다:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   **홈 (Hero Section):** 저를 소개하는 간결한 슬로건과 핵심 메시지.
+-   **소개 (About Me):** 저의 개발 여정, 강점, 개발 철학에 대한 상세한 설명.
+-   **기술 스택 (Skills):** 제가 다룰 수 있는 다양한 기술 스택을 카테고리별로 분류하여 제시.
+-   **프로젝트 (Projects):** 학원 관리 서비스, 슈어모빌리티 프로젝트 (캐디미, 타고가), 슈어소프트테크 프로젝트 (ZET, VDMS) 등 주요 프로젝트에 대한 상세한 설명 (개요, 기술 스택, 역할, 구현 상세, 성과 및 배운 점).
+-   **연락처 (Contact):** 저에게 연락할 수 있는 방법 (이메일, GitHub 등).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 사용된 기술 스택
 
-### `npm test`
+-   **Frontend:** React, JavaScript, HTML5, CSS3
+-   **Backend:** Node.js, Express.js, Python, Django REST Framework (DRF), Celery, RabbitMQ
+-   **Database:** PostgreSQL, MongoDB, Redis, MySQL
+-   **Infrastructure & DevOps:** AWS (EC2, RDS, DocDB, S3, CloudFront, ECS Fargate), Docker, Jenkins, CI/CD (AWS CodePipeline), ELK
+-   **Tools & Others:** Github, Bitbucket, Postman, ESLint, Swagger, Jira, Slack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 시작하기
 
-### `npm run build`
+이 프로젝트를 로컬 환경에서 실행하려면 다음 단계를 따르세요.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. 저장소 클론
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/do-develop-space/my-portfolio.git
+cd my-portfolio
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. 의존성 설치
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. 개발 서버 실행
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+프로젝트가 `http://localhost:3000`에서 실행됩니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 배포
 
-## Learn More
+이 프로젝트는 GitHub Pages를 통해 배포됩니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. `gh-pages` 설치
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install --save-dev gh-pages
+```
 
-### Code Splitting
+### 2. `package.json` 설정
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`package.json` 파일에 `homepage`와 `scripts`를 다음과 같이 설정합니다.
 
-### Analyzing the Bundle Size
+```json
+  "homepage": "http://do-develop-space.github.io/my-portfolio",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. 배포 실행
 
-### Making a Progressive Web App
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+배포가 완료되면 `http://do-develop-space.github.io/my-portfolio`에서 포트폴리오를 확인할 수 있습니다. (배포 후 활성화까지 몇 분 소요될 수 있습니다.)
 
-### Advanced Configuration
+## 연락처
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-   **이메일:** tjkueon0309@gmail.com
+-   **GitHub:** [https://github.com/do-develop-space](https://github.com/do-develop-space)
 
-### Deployment
+## 라이선스
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이 프로젝트는 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
